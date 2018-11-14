@@ -48,6 +48,9 @@ public class Pessoa {
 		this.telefone = telefone;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Sou " + this.nome + " e moro em  " + this.endereco;
+	}
 	
 }
