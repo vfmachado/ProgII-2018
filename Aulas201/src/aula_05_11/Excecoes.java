@@ -24,6 +24,7 @@ public class Excecoes {
 		try {
 			conta.depositar(-100);
 		} catch (Exception e) {
+			//tratamento do erro... 
 			e.printStackTrace();
 		}
 		System.out.println(conta.getSaldo());
