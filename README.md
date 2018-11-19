@@ -19,4 +19,4 @@ Exercícios Indispensáveis
 	48
 	
 Exercícios valendo 1 ponto
-	20, 28, 34, 48
+	20, 21, 28, 34, 48
