@@ -75,7 +75,7 @@ public class MeuBanco {
 			System.out.println("\nNomes cadastrados:");
 			while (rs.next()) {
 				System.out.println("\t" + rs.getString("nome")
-				+ "\t\t" + rs.getString("login"));
+				+ "\t\t" + rs.getString("login") + "\t\t" + rs.getString("senha"));
 			}
 		} catch (SQLException e) {
 			System.out.println("Erro ao buscar os dados");
@@ -85,4 +85,37 @@ public class MeuBanco {
 	
 	//BUSCAR PELO NOME / LOGIN / ID
 	//BUSCAR TODOS - RETORNA UM ARRAYLIST DO TIPO USUARIO
+	
+	public void deletar(String nome) {
+		//meu sql - o que vai ser rodado no banco
+		String sql = "delete from usuario where nome = '"+nome+"';";
+		
+		try {
+			//declaracao do meu statement
+			Statement stat = conexao.createStatement();
+			//execução da string com o sql
+			stat.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void update(Usuario u) {
+		String sql = "update usuario "
+				+ "set login = '"+u.getLogin()+"', "
+				+ "		senha = '"+u.getSenha()+"' "
+				+ "WHERE nome = '"+u.getNome()+"';";
+		
+		try {
+			Statement stat = conexao.createStatement();
+			stat.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
 }

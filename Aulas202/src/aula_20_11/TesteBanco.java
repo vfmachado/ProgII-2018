@@ -30,7 +30,9 @@ public class TesteBanco {
 			System.out.println("O que você deseja fazer?");
 			System.out.println("\t1. Inserir dado");
 			System.out.println("\t2. Ver dados");
-			System.out.println("\t3. Sair");
+			System.out.println("\t3. Alterar usuario");
+			System.out.println("\t4. Remover usuário");
+			System.out.println("\t5. Sair");
 			
 			int opcao = in.nextInt();
 			in.nextLine();
@@ -54,6 +56,21 @@ public class TesteBanco {
 					banco.mostrar();
 					break;
 				case 3:
+					//alterar]
+					System.out.println("Digite o nome, novo login e nova senha");
+					Usuario atualizado = new Usuario();
+					atualizado.setNome(in.nextLine());
+					atualizado.setLogin(in.nextLine());
+					atualizado.setSenha(in.nextLine());
+					banco.update(atualizado);
+					break;
+				case 4:
+					//deletar
+					System.out.println("Nome do usuário: ");
+					String nome = in.nextLine();
+					banco.deletar(nome);
+					break;
+				case 5:
 					saiu = true;
 					break;
 				
