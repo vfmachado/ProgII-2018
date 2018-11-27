@@ -30,6 +30,11 @@ public class Main03 {
 		minhaCompra.add(sm.item(3));
 		minhaCompra.add(sm.item(5));
 		
+		//MOSTRAR O PREÇO E OS ITENS DA COMPRA.
+		//TRATAR AS POSSÍVEIS EXCEÇÕES
+		//E, SE ACHAR QUE DEVE... CRIE UM PROGRAMA ONDE 
+		//A PESSOA POSSA CADASTRAR NOVOS ITENS,
+		//SUPERMERCADOS E FAZER COMPRAS =D
 	}
 
 }
