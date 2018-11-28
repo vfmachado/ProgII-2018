@@ -20,3 +20,6 @@ Exercícios Indispensáveis
 	
 Exercícios valendo 1 ponto
 	20, 21, 28, 34, 48
+
+Exercícios "Treino" para avaliação:
+	4-9, 17, 18, 34, 43, 48 (sem arquivos)

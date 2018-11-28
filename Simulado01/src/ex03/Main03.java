@@ -18,18 +18,22 @@ public class Main03 {
 		Produto p5 = new Produto(4, "Coca-cola", 5.5f);
 		
 		SuperMercado sm1 = new SuperMercado();
-		sm1.addProduto(p1);
-		sm1.addProduto(p2);
-		sm1.addProduto(p3);
-		sm1.addProduto(p4);
-		
+		try {
+			sm1.addProduto(p1);
+			sm1.addProduto(p2);
+			sm1.addProduto(p3);
+			sm1.addProduto(p4);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
 		Compra minhaCompra = new Compra();
 		minhaCompra.add(sm.item(1));
 		minhaCompra.add(sm.item(3));
 		minhaCompra.add(sm.item(3));
 		minhaCompra.add(sm.item(3));
 		minhaCompra.add(sm.item(5));
-		
+		*/
 		//MOSTRAR O PREÇO E OS ITENS DA COMPRA.
 		//TRATAR AS POSSÍVEIS EXCEÇÕES
 		//E, SE ACHAR QUE DEVE... CRIE UM PROGRAMA ONDE 
